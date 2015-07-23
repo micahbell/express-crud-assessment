@@ -7,19 +7,19 @@ block content
     
   .main-content
     for val in theArticles
-      //- if val.bgURL === ""
-      //-   style.
-      //-     .article-header { background-color: lightgray; }
-      //- else
+      //- p #{val.bgURL}
       style.
-        .article-header { background-image: url(https://download.unsplash.com/photo-1422207134147-65fb81f59e38); }
+        .article-header { background-image: url(https://download.unsplash.com/photo-1432836431433-925d3cc0a5cd); }
+        //- .article-header { background-image: url(val.bgURL); }
         
       .article
         .article-header
           if val.bgValue === null
-            h3 #{val.title}
+            h3
+              a(href='/zine/' + val._id + '/article') #{val.title}
           else
-            h3.light #{val.title}
+            h3.light 
+              a(href='/zine/' + val._id + '/article') #{val.title}
         .article-excerpt
           p #{val.excerpt}
         

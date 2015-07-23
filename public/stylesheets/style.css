@@ -5,10 +5,6 @@ body {
   background-image: url('../images/congruent_outline.png');
 }
 
-a {
-  color: #00B7FF;
-}
-
 .header {
   height: 150px;
   text-align: right;
@@ -33,7 +29,7 @@ h2 {
 /***** Index Styles *****/
 .article {
   margin-bottom: 20px;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .article-header {
@@ -45,11 +41,15 @@ h2 {
   color: #777;
 }
 
-.article-header h3.light {
-  color: white;
+.article-header h3 a {
+  color: #777;
 }
 
-.article-excerpt {
+.article-header h3.light a {
+  color: whitesmoke;
+}
+
+.article-excerpt, .article-body {
   padding: 6px 12px 12px;
 }
 
@@ -64,7 +64,7 @@ h2 {
 /***** New Article Styles *****/
 .main-content-new {
   padding: 0px 20px 20px;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .margin-top {
@@ -89,6 +89,33 @@ label.left {
   margin-left: 12.5%;
 }
 
+/***** One Article Styles *****/
+.article-header.show {
+  margin-top: 20px;
+}
+
+.article-header.show h3 {
+  display: inline-block;
+  position: relative;
+  float: left;
+  top: -16px;
+}
+
+.article-header.show h3.light {
+  color: whitesmoke;
+}
+
+.article-header.show h3 a {
+  color: gray;
+  position: relative;
+  left: 850px;
+}
+
+/***** Update Article Styles *****/
+input[value='Delete Article'] {
+  background-color: red;
+  margin-top: 10px;
+}
 
 
 

@@ -1,0 +1,46 @@
+extends ../layout
+
+block content
+    
+  .header
+    h1 The Zine
+    
+  .main-content-new
+    h2 Update Article
+    hr
+    form(action='/zine/' + article._id + '/update' method='post')
+      p
+      .margin-top
+        label.left(for='title') Title
+        input.wide(type='text' name='title' id='title' value=article.title)
+      
+      p
+      label.left(for='background') Background URL
+      input.wide(type='text' name='background' id='background' value=article.bgURL)
+      
+      p
+      .margin-left
+        if article.bgValue === 'on'
+          input(type='checkbox' name='background_value' id='background-value' checked)
+        else
+          input(type='checkbox' name='background_value' id='background-value')
+        label(for='background-value') Background image has dark colors
+      
+      p
+      label.left(for='excerpt') Excerpt
+      textarea.wide(rows='10' cols='60' name='excerpt' id='excerpt') #{article.excerpt}
+      
+      p
+      label.left(for='body') Body
+      textarea.wide(rows='10' cols='60' name='body' id='body') #{article.body}
+      
+      p
+      input.margin-left(type='submit' value="Update Article")
+    
+    form(action='/zine/' + article._id + '/delete' method='post')
+      input.margin-left(type='submit' value='Delete Article')
+    
+    
+    
+    
+//    

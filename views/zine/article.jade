@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    
+  .header
+    h1 The Zine
+    
+  style.
+    .article-header { background-image: url(https://download.unsplash.com/photo-1432836431433-925d3cc0a5cd); }
+    
+  .article
+    .article-header.show
+      if article.bgValue === null
+        h3 #{article.title}
+      else
+        h3.light #{article.title}
+        
+      h3
+        a.edit(href='/zine/' + article._id + '/update') Edit
+    .article-body
+      p #{article.body}
