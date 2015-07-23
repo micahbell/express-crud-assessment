@@ -1,7 +1,30 @@
 extends ../layout
 
 block content
-  h1 Zine
-  
-  form(action='/zine/new-article' method='get')
-    input(type='submit' name='new_article' value='Add New Article')
+    
+  .header
+    h1 The Zine
+    
+  .main-content
+    for val in theArticles
+      if val.bgURL === ""
+        style.
+          .article-header { background-color: lightgray; }
+      else
+        style.
+          .article-header { background-image: url(https://download.unsplash.com/photo-1422207134147-65fb81f59e38); }
+        
+      .article
+        .article-header
+          if val.bgValue === null
+            h3 #{val.title}
+          else
+            h3.light #{val.title}
+        .article-excerpt
+          p #{val.excerpt}
+        
+      
+        
+    p
+    form(action='/zine/new-article' method='get')
+      button(type='sumbit' name='new_article' id='new-button') Add New Article

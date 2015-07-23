@@ -4,33 +4,35 @@ block content
   .header
     h1 The Zine
     
-  .main-content
+  .main-content-new
     h2 New Article
     hr
-    p
-    .margin-top
-      label.left(for='title') Title
-      input.wide(type='text' name='title' id='title')
-    
-    p
-    label.left(for='background') Background URL
-    input.wide(type='text' name='background' id='background')
-    
-    p
-    .margin-left
-      input(type='checkbox' name='background_value' id='background-value')
-      label(for='background-value')&nbsp; Background image has dark colors
-    
-    p
-    label.left(for='excerpt') Excerpt
-    textarea.wide(rows='10' cols='60' name='excerpt' id='excerpt')
-    
-    p
-    label.left(for='body') Body
-    textarea.wide(rows='10' cols='60' name='body' id='body')
-    
-    p
-    input.margin-left(type='submit' name='add' value="Add Article")
+    form(action='/zine/index' method='post')
+      p
+      .margin-top
+        label.left(for='title') Title
+        input.wide(type='text' name='title' id='title')
+      
+      p
+      label.left(for='background') Background URL
+      input.wide(type='text' name='background' id='background')
+      
+      p
+      .margin-left
+        input(type='checkbox' name='background_value' id='background-value')
+        label(for='background-value') Background image has dark colors
+        //- label(for='background-value')&nbsp; Background image has dark colors
+      
+      p
+      label.left(for='excerpt') Excerpt
+      textarea.wide(rows='10' cols='60' name='excerpt' id='excerpt')
+      
+      p
+      label.left(for='body') Body
+      textarea.wide(rows='10' cols='60' name='body' id='body')
+      
+      p
+      input.margin-left(type='submit' value="Add Article")
     
     
     

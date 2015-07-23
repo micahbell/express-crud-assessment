@@ -1,3 +1,4 @@
+/***** Global Styles *****/
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -18,19 +19,52 @@ a {
 
 h1 {
   color: lavender;
+  font-size: 2.25em;
   display: inline-block;
   margin-top: 100px;
   margin-right: 20px;
 }
 
-.main-content {
-  background-color: white;
-  padding: 0px 20px 20px;
-}
-
 h2 {
   padding-top: 20px;
   margin-bottom: 0px;
+}
+
+/***** Index Styles *****/
+.article {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.article-header {
+  height: 60px;
+}
+
+.article-header h3 {
+  padding: 20px 10px 20px;
+  color: #777;
+}
+
+.article-header h3.light {
+  color: white;
+}
+
+.article-excerpt {
+  padding: 6px 12px 12px;
+}
+
+#new-button {
+  font-size: 1.5em;
+  color: #444;
+  background-color: cadetblue;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+/***** New Article Styles *****/
+.main-content-new {
+  padding: 0px 20px 20px;
+  background-color: white;
 }
 
 .margin-top {
@@ -54,6 +88,10 @@ label.left {
 .margin-left {
   margin-left: 12.5%;
 }
+
+
+
+
 
 
 
