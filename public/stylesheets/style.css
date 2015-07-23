@@ -1,8 +1,61 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/congruent_outline.png');
 }
 
 a {
   color: #00B7FF;
 }
+
+.header {
+  height: 150px;
+  text-align: right;
+  margin-top: -40px;
+  /*background-image: url(https://download.unsplash.com/photo-1428954376791-d9ae785dfb2d);*/
+  background-image: url(https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050);
+}
+
+h1 {
+  color: lavender;
+  display: inline-block;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.main-content {
+  background-color: white;
+  padding: 0px 20px 20px;
+}
+
+h2 {
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+
+.margin-top {
+  margin-top: 24px;
+}
+
+input, textarea {
+  margin-bottom: 8px;
+}
+
+.wide {
+  width: 60%;
+}
+
+label.left {
+  display: inline-block;
+  width: 12.5%;
+  vertical-align: top;
+}
+
+.margin-left {
+  margin-left: 12.5%;
+}
+
+
+
+
+//

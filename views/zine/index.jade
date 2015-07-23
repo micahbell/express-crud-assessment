@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  h1 Zine
+  
+  form(action='/zine/new-article' method='get')
+    input(type='submit' name='new_article' value='Add New Article')
