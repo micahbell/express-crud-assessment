@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('monk')('localhost/zine-db');
 var articles = db.get('articles');
+// var validations = require('../lib/validations');
 
 router.get('/zine/index', function(req, res, next) {
   // articles.find().sort({ $natural: -1 }, function(err, record) {
@@ -27,14 +28,19 @@ router.get('/zine/:id/update', function(req, res, next) {
 })
 
 router.post('/zine/index', function(req, res, next) {
-  articles.insert({
-    title: req.body.title,
-    bgURL: req.body.background,
-    bgValue: req.body.background_value,
-    excerpt: req.body.excerpt,
-    body: req.body.body
-  });
-  res.redirect('/zine/index');
+  var errors = validations.errors(req.body.title, req.body.excerpt, req.body.body)
+  // if(errors)
+  //   res.render('zine/new-article', { errorMessages: errors });
+  // else {
+    articles.insert({
+      title: req.body.title,
+      bgURL: req.body.background,
+      bgValue: req.body.background_value,
+      excerpt: req.body.excerpt,
+      body: req.body.body
+    });
+    res.redirect('/zine/index');
+  // }
 });
 
 router.post('/zine/:id/update', function(req, res, next) {
